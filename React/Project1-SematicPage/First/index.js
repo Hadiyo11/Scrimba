@@ -1,23 +1,48 @@
 function ReasonsForReact() {
-    return(
-        <div>
-            <header>
-                <nav>
-                <img src="./react-logo.png" width="40px" />
-                </nav>
-            </header>
-            <h1>Reasons why I am learning react</h1>
-            <ol>I want to be a better frontend developer</ol>
-            <ol>I enjoy being creative</ol>
-            <ol>I love creating good looking UI</ol>
-            <footer>
-                © 2021 Letsitsi development. All rights reserved.
-            </footer>
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
+  );
 }
 
-ReactDOM.render(<ReasonsForReact/>, document.getElementById("root"))
+function MainContent() {
+  return (
+    <div>
+      <h1>Reasons why I am learning react</h1>
+      <ol>
+        <li>I want to be a better frontend developer</li>
+        <li>I enjoy being creative</li>
+        <li>I love creating good looking UI</li>
+      </ol>
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <div>
+      <header>
+        <nav className="nav">
+          <img src="./react-logo.png" className="img" />
+          <ul className="nav-items">
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  );
+}
+
+function Footer() {
+  return <footer>© 2021 Letsitsi development. All rights reserved.</footer>;
+}
+
+ReactDOM.render(<ReasonsForReact />, document.getElementById("root"));
 
 // const page = (
 //     <div>
@@ -35,7 +60,6 @@ ReactDOM.render(<ReasonsForReact/>, document.getElementById("root"))
 
 // ReactDOM.render(page, document.getElementById("root"))
 
-
 // const navbar = (
 //     <nav>
 //         <h1>Hadiyo's Bistro</h1>
@@ -49,7 +73,6 @@ ReactDOM.render(<ReasonsForReact/>, document.getElementById("root"))
 
 // ReactDOM.render(navbar, document.getElementById("root"))
 
-
 // const h1 = document.createElement("h1")
 // h1.textContent = "Hello world"
 // h1.className = "header"
@@ -57,7 +80,6 @@ ReactDOM.render(<ReasonsForReact/>, document.getElementById("root"))
 
 // //JSX
 // ReactDOM.render(<h1 className="header">This is JSX</h1>, document.getElementById("root"))
-
 
 // // ReactDOM.render(<h1>Hello everyone. I am learning React.js!</h1>, document.getElementById("root"))
 
@@ -76,7 +98,6 @@ ReactDOM.render(<ReasonsForReact/>, document.getElementById("root"))
 // //   </p>,
 // //   document.getElementById("root")
 // // );
-
 
 // function Navbar() {
 //     return (
@@ -135,7 +156,7 @@ ReactDOM.render(<ReasonsForReact/>, document.getElementById("root"))
 //     <div>
 //         <Navbar />
 //         <MainContent/>
-        
+
 //     </div>,
 //     document.getElementById("root")
 // )
